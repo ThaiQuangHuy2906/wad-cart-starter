@@ -1,8 +1,10 @@
+
 {
   "name": "cart-starter",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "lint": "node scripts/lint.mjs"
   }
 }
