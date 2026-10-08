@@ -1,6 +1,6 @@
 # Self-assessment — IA#1
 
-Submitted by: <MSSV> — <Họ và tên>
+Submitted by: 24127177 — Thái Quang Huy
 
 Repository: https://github.com/ThaiQuangHuy2906/wad-cart-starter
 

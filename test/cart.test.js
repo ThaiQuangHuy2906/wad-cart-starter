@@ -2,8 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { cartTotal } from '../src/cart.js'
 
-// This test fails until you implement cartTotal. That is the point:
-// run `npm test` first and see it red.
+// Worked example from the assignment specification.
 test('the example from the slides', () => {
   const items = [
     { name: 'Áo thun', price: 180000, qty: 2 },
