@@ -62,3 +62,19 @@ test('the final total rounds up at half a dong and returns a number', () => {
   assert.equal(typeof result, 'number')
   assert.equal(result, 101)
 })
+
+
+test('VAT is calculated only on the subtotal', () => {
+  const items = [{ name: 'Notebook', price: 100, qty: 2 }]
+  const options = { vatRate: 0.1, freeShipFrom: 500, shipFee: 20 }
+
+  assert.equal(cartTotal(items, options), 240)
+})
+
+test('shipping is charged even when VAT pushes the total past the threshold', () => {
+  const items = [{ name: 'Notebook', price: 490, qty: 1 }]
+  const options = { vatRate: 0.1, freeShipFrom: 500, shipFee: 30 }
+
+  assert.equal(cartTotal(items, options), 569)
+})
+
