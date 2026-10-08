@@ -83,3 +83,17 @@ Changed: Tôi tự thêm hai test vào cuối test/cart.test.js mà không dùng
 Rejected: Không có.
 
 By hand: Tôi bổ sung hai test VAT, sau đó chạy lại npm test. Tổng cộng 11 test đều pass. Tôi giữ hai test này để kiểm tra những lỗi tính toán mà bộ 9 test trước đó chưa bao phủ riêng.
+
+## 2026-10-08 — Review cuối theo rubric IA#1
+
+Tool: ChatGPT hỗ trợ đối chiếu rubric, tôi tự kiểm tra và chỉnh sửa project.
+
+Asked for: Rà soát bài IA#1 để tìm những điểm chưa chặt chẽ trước khi tự đánh giá và nộp.
+
+Kept: Giữ nguyên implementation cartTotal và cấu hình Harness vì đã đáp ứng specification và CI chạy thành công. Đồng ý cải thiện tính độc lập của các bài test.
+
+Changed: Tôi tách test kiểm tra làm tròn và kiểu dữ liệu thành hai test riêng. Bổ sung các test cho số lượng âm, subtotal trên ngưỡng miễn phí vận chuyển và chỉ làm tròn sau khi cộng tất cả sản phẩm.
+
+Rejected: Không thay đổi implementation chỉ để tăng số lượng dòng code. Không cài thêm dependencies vì project hiện đã có quality gate hoạt động và đề yêu cầu không dùng thư viện ngoài.
+
+By hand: Tôi xem lại các trường hợp kiểm thử, tự sửa test/cart.test.js, sau đó chạy npm test, npm run lint và git diff --check. Tôi chỉ chấp nhận thay đổi sau khi kiểm tra kết quả trên máy và xác nhận GitHub Actions chạy thành công sau khi push.
